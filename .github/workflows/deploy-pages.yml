@@ -1,5 +1,6 @@
 # Deploy site to GitHub Pages
-# Builds the Vite + React (pnpm) project and publishes ./dist to the gh-pages branch on push to main.
+# Builds the Vite + React + TypeScript project using pnpm and publishes the static site to the gh-pages branch on push to main.
+# The build output (dist/public) is automatically deployed to GitHub Pages.
 name: Deploy site to GitHub Pages
 
 on:
