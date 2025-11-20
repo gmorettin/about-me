@@ -4,14 +4,20 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
+      // For GitHub Pages with subdirectory (e.g., /about-me/)
       var pathSegmentsToKeep = 1;
-
       var l = window.location;
+      var basePath = '/about-me'; // Change this to your repo name
+      
+      // Split the pathname and keep segments after basePath
+      var pathparts = l.pathname.split('/').filter(p => p.length > 0);
+      var baseparts = basePath.split('/').filter(p => p.length > 0);
+      var targetPath = '/' + pathparts.slice(baseparts.length).join('/');
+      
+      // Redirect to index.html with the route in the query string
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/')
-          .replace(/&/g, '~and~') +
+        basePath + '/?route=' + encodeURIComponent(targetPath) +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
       );
