@@ -1,6 +1,6 @@
 {
   "buildCommand": "pnpm install --legacy-peer-deps && pnpm build",
-  "outputDirectory": "dist/public",
+  "outputDirectory": "dist",
   "installCommand": "pnpm install --legacy-peer-deps",
   "env": {
     "OAUTH_SERVER_URL": "http://localhost:3000"
