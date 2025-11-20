@@ -27,6 +27,25 @@
     <!-- Handle GitHub Pages routing for SPA -->
     <script>
       (function(){
+        // Check if we came from 404.html redirect
+        var queryParams = new URLSearchParams(window.location.search);
+        var route = queryParams.get('route');
+        
+        if (route) {
+          // Reconstruct the URL without the route parameter
+          var basePath = '/about-me';
+          var newUrl = basePath + '/' + decodeURIComponent(route).slice(1);
+          
+          // Use history.replaceState to update URL without reload
+          window.history.replaceState(null, null, newUrl);
+          
+          // Remove the route parameter so React router handles it
+          if (window.location.search.includes('route=')) {
+            var cleanUrl = basePath + '/' + decodeURIComponent(route).slice(1);
+            window.history.replaceState(null, null, cleanUrl);
+          }
+        }
+        
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
         if (redirect && redirect !== location.href) {
