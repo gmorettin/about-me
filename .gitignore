@@ -1,0 +1,12 @@
+node_modules
+dist
+*.mov
+*.mp4
+*.zip
+pnpm-lock.yaml
+.DS_Store
+__MACOSX
+New Folder With Items
+client/public/achievements
+drizzle/
+patches/
