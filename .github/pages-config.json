@@ -1,0 +1,8 @@
+{
+  "source": {
+    "branch": "main",
+    "path": "/"
+  },
+  "build_type": "workflow",
+  "cname": null
+}
