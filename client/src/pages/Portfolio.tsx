@@ -259,9 +259,9 @@ export default function Portfolio() {
                 </svg>
                 
                 {/* Photo */}
-                <img 
-                  src="/giorgia-photo.png" 
-                  alt="Giorgia Morettin" 
+                <img
+                  src={`${import.meta.env.BASE_URL}giorgia-photo.png`}
+                  alt="Giorgia Morettin"
                   className="w-80 h-auto object-contain drop-shadow-2xl relative z-10 mx-8"
                 />
               </div>

@@ -19,19 +19,19 @@ const CARD_BORDER_RADIUS = 16;
 
 const CERTIFICATIONS: Certification[] = [
   // Prioritize non-Boomi certifications
-  { id: '1', name: 'Azure - Describe cloud concepts', image: '/certifications/1.png' },
-  { id: '2', name: 'Azure - Describe Azure architecture', image: '/certifications/2.png' },
-  { id: '3', name: 'Azure - Prerequisites for administrators', image: '/certifications/3.png' },
-  { id: '4', name: 'Azure - Implement and manage storage', image: '/certifications/4.png' },
-  { id: '5', name: 'Programming with Python', image: '/certifications/5.png' },
-  { id: '6', name: 'Intercultural Competencies', image: '/certifications/6.png' },
-  { id: '7', name: 'Information Security', image: '/certifications/7.png' },
-  { id: '8', name: 'Digital Project Management', image: '/certifications/8.png' },
-  { id: '9', name: 'Qualtrics Online Surveys', image: '/certifications/9.png' },
-  { id: '10', name: 'Boomi - Professional API Management', image: '/certifications/10.png' },
-  { id: '11', name: 'Boomi - Professional API Design', image: '/certifications/11.png' },
-  { id: '12', name: 'Boomi - Installing and Configuring SAP', image: '/certifications/12.png' },
-  { id: '13', name: 'Boomi - Associate Runtime Architect', image: '/certifications/13.png' },
+  { id: '1', name: 'Azure - Describe cloud concepts', image: import.meta.env.BASE_URL + 'certifications/1.png' },
+  { id: '2', name: 'Azure - Describe Azure architecture', image: import.meta.env.BASE_URL + 'certifications/2.png' },
+  { id: '3', name: 'Azure - Prerequisites for administrators', image: import.meta.env.BASE_URL + 'certifications/3.png' },
+  { id: '4', name: 'Azure - Implement and manage storage', image: import.meta.env.BASE_URL + 'certifications/4.png' },
+  { id: '5', name: 'Programming with Python', image: import.meta.env.BASE_URL + 'certifications/5.png' },
+  { id: '6', name: 'Intercultural Competencies', image: import.meta.env.BASE_URL + 'certifications/6.png' },
+  { id: '7', name: 'Information Security', image: import.meta.env.BASE_URL + 'certifications/7.png' },
+  { id: '8', name: 'Digital Project Management', image: import.meta.env.BASE_URL + 'certifications/8.png' },
+  { id: '9', name: 'Qualtrics Online Surveys', image: import.meta.env.BASE_URL + 'certifications/9.png' },
+  { id: '10', name: 'Boomi - Professional API Management', image: import.meta.env.BASE_URL + 'certifications/10.png' },
+  { id: '11', name: 'Boomi - Professional API Design', image: import.meta.env.BASE_URL + 'certifications/11.png' },
+  { id: '12', name: 'Boomi - Installing and Configuring SAP', image: import.meta.env.BASE_URL + 'certifications/12.png' },
+  { id: '13', name: 'Boomi - Associate Runtime Architect', image: import.meta.env.BASE_URL + 'certifications/13.png' },
 ];
 
 function getGridDimensions(numCards: number): { cols: number; rows: number } {

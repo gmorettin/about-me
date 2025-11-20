@@ -7,7 +7,16 @@ import { defineConfig } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
+const isDev = process.env.NODE_ENV !== "production" && !process.env.CI;
+
+const plugins = [
+  react(),
+  tailwindcss(),
+  // Development-only tooling: include JSX location plugin and Manus runtime only when
+  // not building on CI or for production. The Manus runtime injects preview helpers
+  // that can hide the app when deployed to GitHub Pages.
+  ...(isDev ? [jsxLocPlugin(), vitePluginManusRuntime()] : []),
+];
 
 export default defineConfig({
   base: "/about-me/",

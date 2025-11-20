@@ -72,7 +72,7 @@ export default function Home() {
             {/* Right Image */}
             <div className="relative">
               <img
-                src="/images/portfolio-hero.png"
+                src={`${import.meta.env.BASE_URL}images/portfolio-hero.png`}
                 alt="Portfolio"
                 className="w-full rounded-lg shadow-xl"
               />
